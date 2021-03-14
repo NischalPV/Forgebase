@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  forgebase.identity:
+    image: ${REGISTRY:-nischalvarasadait}/forgebase.identity:${PLATFORM:-linux}-${TAG:-dev}
+    build:
+      context: .
+      dockerfile: Forgebase.Identity/Dockerfile
+
+  forgebase.masterdata:
+    image: ${REGISTRY:-nischalvarasadait}/forgebase.masterdata:${PLATFORM:-linux}-${TAG:-dev}
+    build:
+      context: .
+      dockerfile: Forgebase.Masterdata/Dockerfile
+
